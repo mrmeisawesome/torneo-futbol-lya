@@ -25,7 +25,7 @@ Aplicación web para llevar el control de un torneo de fútbol aficionado: regis
 ## Cómo ejecutarlo
 
 ```
-git clone https://github.com/USUARIO/torneo-futbol.git
+git clone https://github.com/mrmeisawesome/torneo-futbol-lya
 cd torneo-futbol
 npm install
 npm run dev
