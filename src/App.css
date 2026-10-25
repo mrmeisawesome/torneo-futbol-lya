@@ -1,0 +1,244 @@
+/* Estilos generales */
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.contenedor h1 {
+  font-size: 28px;
+  margin: 16px 0;
+}
+
+.contenedor h2 {
+  font-size: 20px;
+  margin: 24px 0 12px;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+/* Escudo de cada equipo */
+.escudo {
+  width: 52px;
+  height: 58px;
+  border-radius: 6px 6px 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.escudo-chico {
+  width: 30px;
+  height: 34px;
+  font-size: 10px;
+}
+
+/* Lista de equipos */
+.lista-equipos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.tarjeta-equipo {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.nombre-equipo {
+  margin: 0;
+  font-weight: 600;
+}
+
+.id-equipo {
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+/* Formulario */
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  align-items: end;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.formulario select,
+.formulario input,
+.filtro-historial {
+  padding: 8px 10px;
+  border: 1px solid #cfd4d8;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.formulario button {
+  grid-column: 1 / 2;
+  justify-self: start;
+}
+
+button {
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #34495e;
+}
+
+.error {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: #b03a2e;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.mensaje-vacio {
+  color: #7f8c8d;
+  font-size: 15px;
+}
+
+/* Partido individual */
+.partido {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.lado-partido {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.lado-partido:last-of-type {
+  justify-content: flex-end;
+}
+
+.marcador {
+  font-weight: 700;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+/* Tabla de posiciones */
+.contenedor-tabla {
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.tabla th,
+.tabla td {
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla th {
+  background: #f0f2f4;
+  font-size: 13px;
+}
+
+.celda-equipo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  min-width: 160px;
+}
+
+.celda-puntos {
+  font-weight: 700;
+}
+
+.filtro-historial {
+  margin-bottom: 12px;
+}
+
+/* Diseño para pantallas pequeñas */
+@media (max-width: 600px) {
+  .contenedor h1 {
+    font-size: 22px;
+  }
+
+  .contenedor h2 {
+    font-size: 18px;
+  }
+
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario button {
+    grid-column: 1;
+    justify-self: stretch;
+  }
+
+  .formulario select,
+  .formulario input,
+  .filtro-historial,
+  button {
+    width: 100%;
+  }
+
+  .tabla {
+    font-size: 13px;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 6px 6px;
+  }
+
+  .partido {
+    flex-wrap: wrap;
+  }
+}
